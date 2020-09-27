@@ -16,7 +16,7 @@ Basic structure for creating REST APIs using Lumen Framework and extra packages
 $ git clone https://github.com/krepe/lumen8-api-skeleton.git
 $ cd lumen8-api-skeleton.git/
 ```
-IMPORTANT: configure .env (copy .env.example) at the root of the application with the development variables: connections with MySQL and MongoDB, APP Ids of the authentication services (google, facebook).
+IMPORTANT: configure .env (copy .env.example) at the root of the application with the development variables: connections with MySQL, APP Ids of the authentication services (google, facebook).
 ```sh
 $ composer install
 $ php artisan key:generate
