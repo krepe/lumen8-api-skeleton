@@ -1,6 +1,6 @@
 # Rest API Lumen Skeleton
 
-Basic structure for creating REST APIs using Lumen Framework and extra packages
+Basic structure for creating REST APIs using Lumen Framework 8 and JWT authentication - generating universally unique identifiers (UUIDs)
 
 ### System requirements
 

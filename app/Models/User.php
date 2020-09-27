@@ -9,12 +9,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use App\Http\Traits\UsesUuid;
+use Illuminate\Support\Str;
+
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract, JWTSubject
 {
-    use Authenticatable, Authorizable, HasFactory;
-    public $incrementing = false;
-    protected $keyType = 'string';
+    use Authenticatable, Authorizable, HasFactory, UsesUuid;
 
     /**
      * The attributes that are mass assignable.

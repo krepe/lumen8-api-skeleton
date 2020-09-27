@@ -7,13 +7,9 @@ use JWTAuth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Http\Traits\UsesUuid;
-use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
-    use UsesUuid;
-
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login','register']]);
@@ -29,7 +25,6 @@ class AuthController extends Controller
         try 
         {
             $user = new User;
-            $user->id=(string) Str::uuid();
             $user->username= $request->input('username');
             $user->email = $request->input('email');
             $user->password = app('hash')->make($request->input('password'));
